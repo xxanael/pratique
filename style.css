@@ -1,0 +1,175 @@
+/* Style général */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* Fond inspiré du ciel bleu-gris et des collines vertes de l'image */
+.page-connexion {
+    background: linear-gradient(160deg, #91a6a9 0%, #d6c19a 42%, #6b7d4c 70%, #263c33 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-connexion::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(39, 67, 73, 0.25), rgba(190, 201, 92, 0.2));
+    pointer-events: none;
+}
+
+/* Carte de connexion translucide */
+.boite-connexion,
+.tableau-de-bord {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 800px;
+    padding: 30px;
+    background: rgba(45, 55, 52, 0.38);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(31, 46, 39, 0.35);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.boite-connexion {
+    max-width: 480px;
+    padding: 45px 42px;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 38px;
+}
+
+.message-accueil {
+    margin-top: 0;
+    color: #f1eadc;
+    font-size: 17px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 28px;
+}
+
+label {
+    margin-top: 15px;
+    margin-bottom: 7px;
+    color: #f4eee2;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 14px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: #e1ddd2;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #c7da45;
+    box-shadow: 0 0 0 3px rgba(199, 218, 69, 0.2);
+}
+
+.souvenir {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    font-weight: normal;
+}
+
+.souvenir input {
+    accent-color: #b9d83b;
+}
+
+button,
+.bouton-retour {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(90deg, #c7dc28, #12ad77);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover,
+.bouton-retour:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 16px rgba(12, 90, 63, 0.35);
+}
+
+.inscription {
+    margin: 22px 0 0;
+    color: #eee8dc;
+}
+
+.inscription a {
+    color: #d7e94b;
+    font-weight: bold;
+}
+
+/* Cartes du tableau de bord */
+.tableau-de-bord {
+    background: rgba(255, 255, 255, 0.88);
+    color: #263c33;
+}
+
+.tableau-de-bord h1,
+.carte h2 {
+    color: #466044;
+}
+
+.cartes {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.carte {
+    flex: 1;
+    min-width: 180px;
+    padding: 20px;
+    background-color: rgba(226, 213, 170, 0.55);
+    border-left: 4px solid #8a9c45;
+    border-radius: 8px;
+}
+
+.carte h2 {
+    margin-top: 0;
+}

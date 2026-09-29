@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-connexion">
+    <div class="boite-connexion">
+        <h1>Connexion</h1>
+        <p class="message-accueil">Bienvenue, connectez-vous à votre compte</p>
+
+        <form action="dashboard.html" method="get">
+            <label for="nom">Nom d'utilisateur</label>
+            <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+
+            <label for="mot-de-passe">Mot de passe</label>
+            <input type="password" id="mot-de-passe" name="mot-de-passe" placeholder="Votre mot de passe" required>
+
+            <label class="souvenir">
+                <input type="checkbox" name="souvenir">
+                <span>Se souvenir de moi</span>
+            </label>
+
+            <button type="submit">Se connecter</button>
+        </form>
+
+      
+    </div>
+</body>
+</html>
